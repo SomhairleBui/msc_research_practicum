@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="#">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+      <a href="#" class="navbar-brand">Dublin Bus Prediction</a>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link" id="nav-search" data-toggle="tab" href="#search-menu" role="tab" aria-controls="search-menu" aria-selected="false">Search</a>
+      <a class="nav-item nav-link" id="nav-other" data-toggle="tab" href="#other-menu" role="tab" aria-controls="other-menu" aria-selected="false">Other</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade" id="search-menu" role="tabpanel" aria-labelledby="nav-search">
+      <div class="container">
+        <h3>Start</h3>
+      <input type="text" id="start" placeholder="From">
+      <button type="button" class="btn btn-primary btn-sm">Drop Pin on map</button>
+      </div>
+      <div class="container">
+        <img width="25" height="25" src="https://image.flaticon.com/icons/png/512/519/519848.png" alt="Swap" title="Swap premium icon">
+      </div>
+      <div class="container">
+        <h3>Destination</h3>
+      <input type="text" id="destination" placeholder="To">
+      <button type="button" class="btn btn-primary btn-sm">Drop Pin on map</button>
+      </div>
+
+      <div class="container">
+      <a data-toggle="collapse" aria-expanded="false" href="#more-opt" aria-controls="collapseExample">
+        More options</a>
+      </div>
+      
+      <input type="text" name="foo">
+
+      <div class="container search-more" id="more-opt">
+        <h3>Journey Date</h3>
+        <input type="text" id="journey date" placeholder="calendar">
+        <button type="button" class="btn btn-primary btn-sm">Select a date</button>
+
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="00" aria-label="hour" aria-describedby="basic-addon2">            <span class="input-group-text">:</span>
+            <input type="text" class="form-control" placeholder="00" aria-label="minute">
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-sm" type="button">Set off at</button>
+            </div>
+          </div>
+
+
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="00" aria-label="hour" aria-describedby="basic-addon2">            <span class="input-group-text">:</span>
+            <input type="text" class="form-control" placeholder="00" aria-label="minute">
+            <div class="input-group-append">
+              <button class="btn btn-primary btn-sm" type="button">Arrive by</button>
+            </div>
+          </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="alarm">
+          <label class="form-check-label" for="alarm">
+            Set alarm for last set off time
+          </label>
+        </div>
+        <h4>Pay method</h4>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="pay-cash">
+            <label class="form-check-label" for="pay-cash">
+              Cash
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="pay-leap">
+            <label class="form-check-label" for="pay-leap">
+              Leap card
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="pay-student">
+            <label class="form-check-label" for="pay-student">
+              Student card
+            </label>
+          </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="other-menu" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <h3>Nearby Stops</h3>
+      <input type="search" id="stop-search" placeholder="Around">
+      <button type="button" class="btn btn-primary btn-sm">Drop Pin on map</button>
+      <h4>Radius:</h4>
+      <input type="text" id="stop-radius" placeholder="KM">
+      <h3>Bus Route</h3>
+      <input type="text" id="route-number" placeholder="Route">
+      <button type="button" class="btn btn-primary btn-sm">Show on map</button>
+      <h3>Bus Stop Time Table</h3>
+      <input type="text" id="stop-number" placeholder="Stop Number">
+      <h4>At</h4>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="00" aria-label="hour">
+        <span class="input-group-text">:</span>
+        <input type="text" class="form-control" placeholder="00" aria-label="quarter">
+      </div>
+      <button type="button" class="btn btn-primary btn-sm">Check</button>
+    </div>
+
+  </div>
+
+
+  <div id="container-main">
+      <div id="showAllStation">
+        <button id="allStnBtn">Show all stops</button>
+      </div>
+      <div id="top-centre-right">
+          <ul class="routeOptions">
+              <li>
+                  <select name="routes" id="routes" onchange="displayRoute()">
+                  </select>
+              </li>
+          </ul>
+      </div>
+      <div id="GoogleMap"></div>
+  </div>
+
+
+</body>
+<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ google_key }}&callback=main"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS , then datepicker-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js"></script>
+</html>

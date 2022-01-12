@@ -1,0 +1,17 @@
+#adults {
+  width: 5%;
+  min-width: 30px;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+#children {
+  width: 5%;
+  min-width: 30px;
+  margin-left: 1%;
+}
+#Cash {
+  margin-left: 1%;
+}
+#Card {
+  margin-left: 1%;
+}

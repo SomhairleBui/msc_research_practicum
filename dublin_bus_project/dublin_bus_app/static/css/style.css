@@ -1,0 +1,26 @@
+html{
+    height: 100%;
+    width: 100%;
+    min-width: 730px;
+}
+
+body {
+    height: 98%;
+    width: 99%;
+}
+
+#container-main {
+    height: 100%;
+    width: 100%;
+}
+
+#GoogleMap {
+    height: 100%;
+    width: 100%;
+    position: static;
+    border: 2px solid black;
+}
+
+
+
+

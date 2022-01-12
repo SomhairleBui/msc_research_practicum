@@ -1,0 +1,64 @@
+.floating-panel {
+  position: absolute;
+  top: 60px;
+  left: 0%;
+  z-index: 5;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: white;
+}
+
+.floating-panel button {
+  font-size: 12px;
+  opacity: 65%;
+}
+
+.floating-panel div {
+  text-align: left;
+}
+
+.tourist-img {
+  width: 150px;
+}
+
+.tourist-info {
+  max-width: 250px;
+  min-width: 100px;
+}
+
+.tourist-info div {
+  margin-bottom: 10px;
+}
+
+.tourist-info h3 {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.tourist-info div {
+  margin-bottom: 10px;
+}
+
+.tourist-info button {
+  font-size: 15px;
+}
+
+.floating-panel h3 {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 65%;
+}
+
+.floating-panel .scrollable {
+  height: 150px;
+  overflow: auto;
+  border-color: hsl(0, 0%, 80%) !important;
+  border-width: 1px !important;
+  border-style: solid;
+}
+
+.floating-panel .scrollable label {
+  cursor: pointer;
+}

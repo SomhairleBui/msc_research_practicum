@@ -1,0 +1,22 @@
+id,holiday_date,summary
+1,2021-01-01,New Year's Day
+2,2021-04-02,Good Friday
+3,2021-04-05,Easter Monday
+4,2021-10-25,October Bank Holiday
+5,2021-12-31,New Year's Eve
+6,2021-03-17,St. Patrick's Day
+7,2021-06-07,June Bank Holiday
+8,2021-12-25,Christmas Day
+9,2021-05-03,May Day
+10,2021-08-02,August Bank Holiday
+11,2021-12-24,Christmas Eve
+12,2021-12-26,St. Stephen's Day
+13,2018-01-01,New Year's Day
+14,2018-03-19,St. Patrick's Day
+15,2018-04-02,Easter Monday
+16,2018-05-07,Early May Bank Holiday
+17,2018-06-04,June Bank Holiday
+18,2018-08-06,August Bank Holiday
+19,2018-10-29,October Bank Holiday
+20,2018-12-25,Christmas Day
+21,2018-12-26,St. Stephen's Day
