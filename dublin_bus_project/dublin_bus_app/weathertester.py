@@ -6,16 +6,16 @@ import json
 
 
 
-sql_hostname = '127.0.0.1'
-sql_username = 'team16'
-sql_password = '6pT7xqWF3VK68fmP'
-sql_main_database = 'team16'
-sql_port = 3306
-ssh_host = 'telemachus.ucd.ie'
-ssh_user = 'team16'
-ssh_password='$Y_md3=FEyz{b~+;'
-ssh_port = 22
-sql_ip = '1.1.1.1.1'
+sql_hostname = ''
+sql_username = ''
+sql_password = ''
+sql_main_database = ''
+sql_port = 
+ssh_host = ''
+ssh_user = ''
+ssh_password=''
+ssh_port = 
+sql_ip = ''
 
 
 #Open the SSH tunnel (Connects to the HPS)
